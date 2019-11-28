@@ -1,0 +1,36 @@
+{
+    "name": "bc-consulting/tuning-api-client",
+    "description": "Tuning Api Client",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Miguel De Buf",
+            "email": "miguel.debuf@orionsoftware.be"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "BcConsulting\\TuningApiClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BcConsulting\\TuningApiClient\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BcConsulting\\TuningApiClient\\TuningApiClientServiceProvider"
+            ]
+        }
+    }
+}
