@@ -27,8 +27,8 @@ class TuningApiClient
         static::$client = new static($config, $guzzle);
     }
 
-    private function __construct(array $config = [], GuzzleHttpClient $guzzle = null)
-    {
+    public function __construct(array $config = [], GuzzleHttpClient $guzzle = null)
+    {        
         $this->token = $config['api_token'];
         $this->base_uri = $config['api_url'];
 

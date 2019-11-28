@@ -30,6 +30,20 @@ abstract class TestCase extends BaseTestCase
         ], $this->guzzle->client);
 	}
 
+    protected function getPackageProviders($app)
+    {
+        return [
+            'BcConsulting\TuningApiClient\TuningApiClientServiceProvider',
+        ];
+    }
+
+    protected function getPackageAliases($app)
+    {
+        return [
+            'TuningApiClient' => 'BcConsulting\TuningApiClient\Facades\TuningApiClient',
+        ];
+    }
+
 	protected function withResponse($response)
 	{
         $body = null;

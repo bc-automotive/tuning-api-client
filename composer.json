@@ -30,7 +30,10 @@
         "laravel": {
             "providers": [
                 "BcConsulting\\TuningApiClient\\TuningApiClientServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "TuningApiClient": "BcConsulting\\TuningApiClient\\Facades\\TuningApiClient"
+            }
         }
     }
 }

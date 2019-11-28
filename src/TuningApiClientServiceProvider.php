@@ -29,10 +29,8 @@ class TuningApiClientServiceProvider extends ServiceProvider
         //
         $this->mergeConfigFrom(__DIR__.'/../config/tuning-api-client.php', 'tuning-api-client');
 
-        $app->singleton('tuning-api-client', function ($app) {
+        $this->app->singleton('tuning-api-client', function ($app) {
             return new TuningApiClient($app['config']->get('tuning-api-client'));
         });
-
-
     }
 }
